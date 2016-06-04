@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <!--   <script type="text/javascript"  src="./js/ion.sound.min.js"></script>
+ -->
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+ 
+
+ <script type="text/javascript" src="./index.js"></script>
+
+<link rel="stylesheet" type="text/css" href="./index1.css" />
+
+<title>
+    This is Guessing
+</title>
+
+</head>
+<body>
+ 
+ <div data-role="page" id="mainPage">
+
+
+    
+
+    <div role="main" data-role="content" >
+      <div class="ui-grid-b ui-bar ui-bar-e" id="itr">
+            <div class="div0 ui-block-a">1</div>
+            <div class="div1 ui-block-b">2</div>
+            <div class="div2 ui-block-c">3</div>
+
+            <div class="div3 ui-block-a">4</div>
+            <div class="div4 ui-block-b">5</div>
+            <div class="div5 ui-block-c">6</div>
+
+            <div class="div6 ui-block-a">7</div>
+            <div class="div7 ui-block-b">8</div>
+            <div class="div8 ui-block-c">9</div>
+
+            <div class="div9 ui-block-a">10</div>
+            <div class="div10 ui-block-b">12</div>
+            <div class="div11 ui-block-c">13</div>
+         </div>
+      </div>
+
+<div id="maindiv" data-role="footer" >
+
+      <div id="results" style="height: 25%" class="classno1">A</div>    
+          <a href="#imageD" data-rel="dialog" data-transition="flip">Open dialog to take picture</a>
+         <button id="resetButt">Shuffle </button>
+
+         <div id="fireworks-template">
+     <div id="fw" class="firework"></div>
+     <div id="fp" class="fireworkParticle"><img src="img/particles.gif" alt="" /></div>
+    </div>
+    <div id="fireContainer"></div>
+      <br/> <br/>
+    </div>
+
+    
+ </div>
+  
+
+ <div data-role="page" id="imageD">
+    <div data-role="content">
+    <button id="divButt0" onclick="app.captureImage();"  style="float:left">Use this image</button>
+<img id="theImage" src="" style="position: relative; width: 300px; height: 300px;">
+
+
+<a href="#mainPage" data-role="button" data-rel="back" data-theme="c" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-up-c"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Go Back</span></span></a>
+
+</div>
+</div>
+
+
+
+</body>
+
+<script type="text/javascript">
+    $(document).ready( function() {
+        initialize(); 
+        console.log("in the ready !!");
+
+  });
+
+
+</script>
+
+<script type="text/javascript">
+    function ScaleContentToDevice(){
+    scroll(0, 0);
+    var content = $.mobile.getScreenHeight() - $(".ui-header").outerHeight() - $(".ui-footer").outerHeight() - $(".ui-content").outerHeight() + $(".ui-content").height();
+    $(".ui-content").height(content);
+}
+
+$(document).on( "pagecontainershow", function(){
+    ScaleContentToDevice();        
+});
+
+$(window).on("resize orientationchange", function(){
+    ScaleContentToDevice();
+});
+</script> 
+
+</html>

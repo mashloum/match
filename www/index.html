@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/ion.sound.min.js"></script>
+
+<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<link rel="stylesheet" type="text/css" href="css/index1.css">
+
+<title>This is Guessing</title></head>
+<body >
+<div data-role="page" id="mainPage">
+<table style="background-color: rgb(204, 255, 255);">
+<tbody><tr><th>  </th><th> </th></tr>
+</tbody><tbody><tr><td style="width: 70%;">
+
+ 
+    <table border="1" cellpadding="2" cellspacing="2" width="100%">
+    <tbody><tr><th>  </th><th> </th> <th> </th><th> </th> </tr>
+
+        </tbody><tbody><tr> 
+            <td  class="bx td0 ui--a" height="100">1</td>
+            <td class="bx td1 ui--b" height="100">2</td>
+            <td class="bx td2 ui--c" height="100">3</td>
+            <td class="bx td3 ui--a" height="100">4</td>
+</tr><tr>
+            <td class="bx td4 ui--b" height="100">5</td>
+            <td class="bx td5 ui--c" height="100">6</td>
+            <td class="bx td6 ui--a" height="100">7</td>
+            <td class="bx td7 ui--b" height="100">8</td>
+</tr><tr>
+            <td class="bx td8 ui--c" height="100">9</td>
+            <td class="bx td9 ui--a" height="100">10</td>
+            <td class="bx td10 ui--b" height="100">11</td>
+            <td class="bx td11 ui--c" height="100">12</td>
+         </tr>
+         </tbody>
+        </table>
+      <br>
+      </td> <td style="width: 30%;"><div id="maindiv" data-role="footer">
+      <div id="results" style="height: 25%;" class="classno1"></div>    
+          <a href="index.html#imageD" data-rel="dialog" data-transition="flip">Use your picture</a>
+         <button id="resetButt">Shuffle </button>
+
+         <div id="fireworks-template">
+     <div id="fw" class="firework"></div>
+     <div id="fp" style="display:none;" class=" fireworkParticle"><img src="img/particles.gif" alt=""></div>
+    </div>
+    <div id="fireContainer"></div></div></td></tr>
+  <tr><td></td><td></td></tr>
+  <tr><td></td><td></td></tr>
+  </tbody>
+ </table>
+</div>
+<div data-role="page" id="imageD">
+    <div data-role="content">
+    <button id="divButt0" onclick="app.captureImage();" style="float: left;">Use this image</button>
+<img id="theImage" src="" style="position: relative; width: 300px; height: 300px;">
+
+
+<a href="#mainPage" data-role="button" data-rel="back" data-theme="c" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-up-c"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Go Back</span></span></a>
+
+</div>
+</div>
+<script type="text/javascript" src="cordova.js"></script>
+
+ <script type="text/javascript">
+    $(document).ready( function() {
+        app.initialize();
+        initialize(); 
+        console.log("in the ready !!");
+   });
+ </script>
+ </body></html>

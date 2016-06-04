@@ -1,0 +1,29 @@
+    /*position: absolute;*/
+
+/*div[data-role="content"] {
+    background: #000;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    border-spacing: 3;
+}
+*/
+/*div.ui-grid-b {
+    height: 75%;
+
+}
+*/
+img{
+        width:100%; height:auto;
+}
+td.bx {
+	width :90;
+	height:90 ;
+	border:3px solid black;
+}
+/*.ui-block-a, .ui-block-b, .ui-block-c {
+*/    /*height: 20%;*/
+/*    height:20%;
+    background-color: #ff0
+}*/
